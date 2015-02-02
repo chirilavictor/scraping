@@ -1,0 +1,14 @@
+<h1>RestHora#meniu_rest_hora</h1>
+<p>Find me in app/views/rest_hora/meniu_rest_hora.html.erb</p>
+<br />
+<h3>Meniu Restaurant Hora</h3>
+
+<table border="1">
+<tr><th>Nr</th><th>Categorie</th><th>Fel mâncare</th><th>Cantitate</th><th>Pret</th></tr>
+<% i = 1 %>
+<% @meniu_restaurant_hora.compact %>
+<% @meniu_restaurant_hora.each do |x| %>
+	<tr><td><%= i %></td><td><%= x[:categorie] %></td><td><%= x[:fel_mancare] %></td><td><%= x[:cantitate] %></td><td><%= x[:pret] %></td></tr>
+	<% i += 1 %>
+<% end %>
+</table>
